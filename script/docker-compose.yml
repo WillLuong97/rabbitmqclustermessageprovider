@@ -5,7 +5,7 @@ services:
     build: ./rabbitcluster/.
     environment:
       - RABBITMQ_CONFIG_FILE=/etc/rabbitmq/rabbitmq-custom
-      - RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS=-rabbit log [{console,[{level,debug}]}] -setcookie myCookieSecretXCBSDFASDGASFG
+      - RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS=-rabbit log [{console,[{level,debug}]}] -setcookie ADD_COOKIE_SECRET_HERE_1
       - RABBITMQ_NODENAME=rabbit@rabbitmq1
     ports:
       - 15772:15672
@@ -16,7 +16,7 @@ services:
     build: ./rabbitcluster/.
     environment:
       - RABBITMQ_CONFIG_FILE=/etc/rabbitmq/rabbitmq-custom
-      - RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS=-rabbit log [{console,[{level,debug}]}] -setcookie myCookieSecretXCBSDFASDGASFG
+      - RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS=-rabbit log [{console,[{level,debug}]}] -setcookie ADD_COOKIE_SECRET_HERE_2
       - RABBITMQ_NODENAME=rabbit@rabbitmq2
     ports:
       - 15872:15672
